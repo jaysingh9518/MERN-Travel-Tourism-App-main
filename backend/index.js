@@ -17,7 +17,7 @@ dotenv.config();
 const __dirname = path.resolve();
 const allowedOrigins = [
   "http://localhost:4173",
-  "https://mern-travel-tourism-app-main-9qh7.onrender.com",
+  "https://mern-travel-tourism-app-main-1.onrender.com",
 ];
 
 mongoose
