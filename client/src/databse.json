@@ -1,0 +1,382 @@
+[
+    {
+        "packageName": "Goa Beach Paradise",
+        "packageDescription": "Explore the sunny beaches of Goa with vibrant nightlife, serene beaches, and adventure-filled activities.",
+        "packageDestination": "Goa",
+        "packageDays": 5,
+        "packageNights": 4,
+        "packageAccommodation": "Beachfront cottage with stunning sea views",
+        "packageTransportation": "Flight",
+        "packageMeals": "Breakfast included, with additional meal packages available",
+        "packageActivities": "Water sports, beach parties, and sunset cruises",
+        "packagePrice": 700,
+        "packageDiscountPrice": 650,
+        "packageOffer": true,
+        "packageRating": 0,
+        "packageTotalRatings": 0,
+        "packageImages": [
+            "https://res.cloudinary.com/dkxmweeur/image/upload/v1729525222/packages/wdotu5ib5w9aronxwjkm.jpg"
+        ]
+    },
+    {
+        "packageName": "Kerala Backwater Bliss",
+        "packageDescription": "Experience the tranquil backwaters of Kerala with houseboat stays and breathtaking views.",
+        "packageDestination": "Kerala-backwaters",
+        "packageDays": 6,
+        "packageNights": 5,
+        "packageAccommodation": "Houseboat stay with serene backwater views",
+        "packageTransportation": "Train",
+        "packageMeals": "All meals included, featuring traditional Kerala cuisine",
+        "packageActivities": "Houseboat cruise, village tours, and birdwatching",
+        "packagePrice": 800,
+        "packageDiscountPrice": 750,
+        "packageOffer": true,
+        "packageRating": 0,
+        "packageTotalRatings": 0,
+        "packageImages": [
+            "https://res.cloudinary.com/dkxmweeur/image/upload/v1729525222/packages/nclwp4tsp8v7lcjtrfcn.jpg"
+        ]
+    },
+    {
+        "packageName": "Royal Jaipur Retreat",
+        "packageDescription": "Discover the royal heritage of Jaipur with its palaces, forts, and vibrant culture.",
+        "packageDestination": "Jaipur",
+        "packageDays": 4,
+        "packageNights": 3,
+        "packageAccommodation": "Stay at a heritage hotel with royal interiors",
+        "packageTransportation": "Flight",
+        "packageMeals": "Complimentary breakfast included",
+        "packageActivities": "City palace tour, elephant ride at Amber Fort, and shopping in local markets",
+        "packagePrice": 600,
+        "packageDiscountPrice": 550,
+        "packageOffer": true,
+        "packageRating": 0,
+        "packageTotalRatings": 0,
+        "packageImages": [
+            "https://res.cloudinary.com/dkxmweeur/image/upload/v1729525222/packages/jdnvdjtr9kkkepbkoywa.jpg"
+        ]
+    },
+    {
+        "packageName": "Manali Mountain Escape",
+        "packageDescription": "Enjoy the scenic beauty and adventure activities in the hills of Manali.",
+        "packageDestination": "Manali",
+        "packageDays": 7,
+        "packageNights": 6,
+        "packageAccommodation": "Luxury mountain lodge with panoramic views",
+        "packageTransportation": "Flight",
+        "packageMeals": "All meals included",
+        "packageActivities": "Trekking, river rafting, and hot springs",
+        "packagePrice": 850,
+        "packageDiscountPrice": 800,
+        "packageOffer": true,
+        "packageRating": 0,
+        "packageTotalRatings": 0,
+        "packageImages": [
+            "https://res.cloudinary.com/dkxmweeur/image/upload/v1729525222/packages/yjbg1ii2z72nlezh50eo.jpg"
+        ]
+    },
+    {
+        "packageName": "Udaipur Lake Palace",
+        "packageDescription": "Experience the romantic city of Udaipur with its stunning lakes and royal heritage.",
+        "packageDestination": "Udaipur",
+        "packageDays": 4,
+        "packageNights": 3,
+        "packageAccommodation": "Stay at a luxury hotel overlooking Lake Pichola",
+        "packageTransportation": "Flight",
+        "packageMeals": "Breakfast and dinner included",
+        "packageActivities": "City palace tour, boat ride on Lake Pichola, and cultural evening",
+        "packagePrice": 750,
+        "packageDiscountPrice": 700,
+        "packageOffer": true,
+        "packageRating": 0,
+        "packageTotalRatings": 0,
+        "packageImages": [
+            "https://res.cloudinary.com/dkxmweeur/image/upload/v1729525222/packages/vemztiofenwzadviifmm.jpg"
+        ]
+    },
+    {
+        "packageName": "Andaman Island Adventure",
+        "packageDescription": "Explore the serene beaches and marine life of Andaman with scuba diving and island tours.",
+        "packageDestination": "Andaman-nicobar",
+        "packageDays": 7,
+        "packageNights": 6,
+        "packageAccommodation": "Beachfront resort with private beach access",
+        "packageTransportation": "Flight",
+        "packageMeals": "Breakfast included",
+        "packageActivities": "Scuba diving, island hopping, and water sports",
+        "packagePrice": 950,
+        "packageDiscountPrice": 900,
+        "packageOffer": true,
+        "packageRating": 0,
+        "packageTotalRatings": 0,
+        "packageImages": [
+            "https://res.cloudinary.com/dkxmweeur/image/upload/v1729525222/packages/dvstn3onidnlurrzmhfo.jpg"
+        ]
+    },
+    {
+        "packageName": "Rishikesh Adventure Retreat",
+        "packageDescription": "Find peace and thrill in Rishikesh, known for its yoga retreats and white-water rafting.",
+        "packageDestination": "Rishikesh",
+        "packageDays": 5,
+        "packageNights": 4,
+        "packageAccommodation": "Riverside camp with mountain views",
+        "packageTransportation": "Train",
+        "packageMeals": "All meals included",
+        "packageActivities": "Yoga sessions, white-water rafting, and bonfire evenings",
+        "packagePrice": 700,
+        "packageDiscountPrice": 650,
+        "packageOffer": true,
+        "packageRating": 0,
+        "packageTotalRatings": 0,
+        "packageImages": [
+            "https://res.cloudinary.com/dkxmweeur/image/upload/v1729525222/packages/hhgndx1b3nv8rbf0g6hl.jpg"
+        ]
+    },
+    {
+        "packageName": "Agra Heritage Tour",
+        "packageDescription": "Discover the majestic beauty of the Taj Mahal and other Mughal architectural wonders in Agra.",
+        "packageDestination": "Agra",
+        "packageDays": 3,
+        "packageNights": 2,
+        "packageAccommodation": "Luxury hotel with views of the Taj Mahal",
+        "packageTransportation": "Train",
+        "packageMeals": "Complimentary breakfast included",
+        "packageActivities": "Taj Mahal tour, Agra Fort visit, and local market shopping",
+        "packagePrice": 500,
+        "packageDiscountPrice": 450,
+        "packageOffer": true,
+        "packageRating": 0,
+        "packageTotalRatings": 0,
+        "packageImages": [
+            "https://res.cloudinary.com/dkxmweeur/image/upload/v1729525222/packages/awqrcqdlttgyqb8soevr.jpg"
+        ]
+    },
+    {
+        "packageName": "Jaisalmer Desert Safari",
+        "packageDescription": "Explore the golden sands of Jaisalmer with a thrilling desert safari and stay in luxurious desert camps.",
+        "packageDestination": "Jaisalmer",
+        "packageDays": 4,
+        "packageNights": 3,
+        "packageAccommodation": "Luxury desert camp with bonfire evenings",
+        "packageTransportation": "Flight",
+        "packageMeals": "All meals included",
+        "packageActivities": "Camel safari, dune bashing, and cultural performances",
+        "packagePrice": 600,
+        "packageDiscountPrice": 550,
+        "packageOffer": true,
+        "packageRating": 0,
+        "packageTotalRatings": 0,
+        "packageImages": [
+            "https://res.cloudinary.com/dkxmweeur/image/upload/v1729525222/packages/kfdt36iqaosohrdhqtly.jpg"
+        ]
+    },
+    {
+        "packageName": "Darjeeling Tea Estate Escape",
+        "packageDescription": "Enjoy the scenic tea gardens of Darjeeling with views of the mighty Kanchenjunga.",
+        "packageDestination": "Darjeeling",
+        "packageDays": 5,
+        "packageNights": 4,
+        "packageAccommodation": "Tea estate bungalow with panoramic mountain views",
+        "packageTransportation": "Train",
+        "packageMeals": "Breakfast and dinner included",
+        "packageActivities": "Tea estate tour, Himalayan Mountaineering Institute visit, and Toy Train ride",
+        "packagePrice": 700,
+        "packageDiscountPrice": 650,
+        "packageOffer": true,
+        "packageRating": 0,
+        "packageTotalRatings": 0,
+        "packageImages": [
+            "https://res.cloudinary.com/dkxmweeur/image/upload/v1729525222/packages/omt5cyghsz3sptawqrh4.jpg"
+        ]
+    },
+    {
+        "packageName": "Varanasi Spiritual Journey",
+        "packageDescription": "Experience the spiritual essence of Varanasi, with its sacred temples and serene ghats.",
+        "packageDestination": "Varanasi",
+        "packageDays": 4,
+        "packageNights": 3,
+        "packageAccommodation": "Riverside hotel with views of the Ganges",
+        "packageTransportation": "Train",
+        "packageMeals": "All meals included",
+        "packageActivities": "Ganga Aarti, temple visits, and boat ride on the Ganges",
+        "packagePrice": 600,
+        "packageDiscountPrice": 550,
+        "packageOffer": true,
+        "packageRating": 0,
+        "packageTotalRatings": 0,
+        "packageImages": [
+            "https://res.cloudinary.com/dkxmweeur/image/upload/v1729525222/packages/crlj7pza8brlytruwdkg.jpg"
+        ]
+    },
+    {
+        "packageName": "Shimla Hill Station Retreat",
+        "packageDescription": "Unwind in the beautiful hill station of Shimla, surrounded by lush forests and colonial charm.",
+        "packageDestination": "Shimla",
+        "packageDays": 6,
+        "packageNights": 5,
+        "packageAccommodation": "Heritage hotel with mountain views",
+        "packageTransportation": "Train",
+        "packageMeals": "Breakfast included",
+        "packageActivities": "Mall road shopping, Jakhoo Temple visit, and toy train ride",
+        "packagePrice": 750,
+        "packageDiscountPrice": 700,
+        "packageOffer": true,
+        "packageRating": 0,
+        "packageTotalRatings": 0,
+        "packageImages": [
+            "https://res.cloudinary.com/dkxmweeur/image/upload/v1729525222/packages/cuypklvm2hsu61elvuze.jpg"
+        ]
+    },
+    {
+        "packageName": "Pondicherry Beachfront Escape",
+        "packageDescription": "Relax in the French colonial town of Pondicherry with its pristine beaches and unique culture.",
+        "packageDestination": "Pondicherry",
+        "packageDays": 4,
+        "packageNights": 3,
+        "packageAccommodation": "Beachfront resort with French colonial architecture",
+        "packageTransportation": "Flight",
+        "packageMeals": "Breakfast and dinner included",
+        "packageActivities": "Beach activities, Aurobindo Ashram visit, and cycling tours",
+        "packagePrice": 650,
+        "packageDiscountPrice": 600,
+        "packageOffer": true,
+        "packageRating": 0,
+        "packageTotalRatings": 0,
+        "packageImages": [
+            "https://res.cloudinary.com/dkxmweeur/image/upload/v1729525222/packages/ko31csvnmnykatbrjctz.jpg"
+        ]
+    },
+    {
+        "packageName": "Khajuraho Temple Tour",
+        "packageDescription": "Marvel at the intricate carvings and rich history of the UNESCO World Heritage temples in Khajuraho.",
+        "packageDestination": "Khajuraho",
+        "packageDays": 3,
+        "packageNights": 2,
+        "packageAccommodation": "Heritage hotel near the temples",
+        "packageTransportation": "Train",
+        "packageMeals": "All meals included",
+        "packageActivities": "Temple tours, sound and light show, and local handicrafts shopping",
+        "packagePrice": 550,
+        "packageDiscountPrice": 500,
+        "packageOffer": true,
+        "packageRating": 0,
+        "packageTotalRatings": 0,
+        "packageImages": [
+            "https://res.cloudinary.com/dkxmweeur/image/upload/v1729525222/packages/n9d3un0q4rw4qwra6ysc.jpg"
+        ]
+    },
+    {
+        "packageName": "Hampi Ancient Ruins Tour",
+        "packageDescription": "Explore the UNESCO World Heritage site of Hampi with its magnificent temples and ruins.",
+        "packageDestination": "Hampi",
+        "packageDays": 4,
+        "packageNights": 3,
+        "packageAccommodation": "Luxury resort near the ruins",
+        "packageTransportation": "Train",
+        "packageMeals": "Breakfast included",
+        "packageActivities": "Temple and ruins tour, coracle ride, and rock climbing",
+        "packagePrice": 600,
+        "packageDiscountPrice": 550,
+        "packageOffer": true,
+        "packageRating": 0,
+        "packageTotalRatings": 0,
+        "packageImages": [
+            "https://res.cloudinary.com/dkxmweeur/image/upload/v1729525222/packages/ep5cwy1fctzi6bvsajnu.jpg"
+        ]
+    },
+    {
+        "packageName": "Ranthambore Wildlife Safari",
+        "packageDescription": "Get up close to the majestic tigers of Ranthambore with this thrilling wildlife safari experience.",
+        "packageDestination": "Ranthambore",
+        "packageDays": 5,
+        "packageNights": 4,
+        "packageAccommodation": "Luxury jungle lodge",
+        "packageTransportation": "Train",
+        "packageMeals": "All meals included",
+        "packageActivities": "Safari drives, bird watching, and nature walks",
+        "packagePrice": 850,
+        "packageDiscountPrice": 800,
+        "packageOffer": true,
+        "packageRating": 0,
+        "packageTotalRatings": 0,
+        "packageImages": [
+            "https://res.cloudinary.com/dkxmweeur/image/upload/v1729525222/packages/mqgixn0jn8fidb6uowtn.jpg"
+        ]
+    },
+    {
+        "packageName": "Mysore Royal Heritage Tour",
+        "packageDescription": "Discover the royal city of Mysore, famous for its palaces, silk, and sandalwood.",
+        "packageDestination": "Mysore",
+        "packageDays": 3,
+        "packageNights": 2,
+        "packageAccommodation": "Luxury hotel near Mysore Palace",
+        "packageTransportation": "Train",
+        "packageMeals": "Breakfast included",
+        "packageActivities": "Mysore Palace tour, Chamundi Hill visit, and shopping for silk and handicrafts",
+        "packagePrice": 600,
+        "packageDiscountPrice": 550,
+        "packageOffer": true,
+        "packageRating": 0,
+        "packageTotalRatings": 0,
+        "packageImages": [
+            "https://res.cloudinary.com/dkxmweeur/image/upload/v1729525222/packages/fcdkssqa8ixv9uzehnsn.jpg"
+        ]
+    },
+    {
+        "packageName": "Rann of Kutch Desert Festival",
+        "packageDescription": "Experience the vibrant culture of Gujarat during the Rann Utsav with its colorful festivals and desert landscapes.",
+        "packageDestination": "Rann-of-Kutch",
+        "packageDays": 6,
+        "packageNights": 5,
+        "packageAccommodation": "Luxury tents in the desert",
+        "packageTransportation": "Flight",
+        "packageMeals": "All meals included",
+        "packageActivities": "Desert safari, cultural performances, and handicraft shopping",
+        "packagePrice": 900,
+        "packageDiscountPrice": 850,
+        "packageOffer": true,
+        "packageRating": 0,
+        "packageTotalRatings": 0,
+        "packageImages": [
+            "https://res.cloudinary.com/dkxmweeur/image/upload/v1729525222/packages/l7ksuxprztdqre3xw1j1.jpg"
+        ]
+    },
+    {
+        "packageName": "Auli Ski Adventure",
+        "packageDescription": "Hit the slopes in Auli, India's premier ski destination, with breathtaking views of the Himalayas.",
+        "packageDestination": "Auli",
+        "packageDays": 5,
+        "packageNights": 4,
+        "packageAccommodation": "Ski resort with ski-in, ski-out access",
+        "packageTransportation": "Flight",
+        "packageMeals": "Breakfast included",
+        "packageActivities": "Skiing, snowboarding, and cable car rides",
+        "packagePrice": 950,
+        "packageDiscountPrice": 900,
+        "packageOffer": true,
+        "packageRating": 0,
+        "packageTotalRatings": 0,
+        "packageImages": [
+            "https://res.cloudinary.com/dkxmweeur/image/upload/v1729525222/packages/e0xlu6mea1cmpesxycbe.jpg"
+        ]
+    },
+    {
+        "packageName": "Kolkata Cultural Tour",
+        "packageDescription": "Immerse yourself in the rich cultural history of Kolkata with visits to iconic landmarks and cultural experiences.",
+        "packageDestination": "Kolkata",
+        "packageDays": 4,
+        "packageNights": 3,
+        "packageAccommodation": "Heritage hotel in the heart of Kolkata",
+        "packageTransportation": "Flight",
+        "packageMeals": "Breakfast included",
+        "packageActivities": "Victoria Memorial, Howrah Bridge, and tram ride",
+        "packagePrice": 600,
+        "packageDiscountPrice": 550,
+        "packageOffer": true,
+        "packageRating": 0,
+        "packageTotalRatings": 0,
+        "packageImages": [
+            "https://res.cloudinary.com/dkxmweeur/image/upload/v1729525222/packages/ehswoltqsjm39umvucpr.jpg"
+        ]
+    }
+]
