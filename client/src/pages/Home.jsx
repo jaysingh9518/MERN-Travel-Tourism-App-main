@@ -20,6 +20,7 @@ const Home = () => {
   const [offerPackages, setOfferPackages] = useState([]);
   const [featuredBlogs, setFeaturedBlogs] = useState([]); // State for featured blogs
   const [loading, setLoading] = useState(false);
+  const API_URL = import.meta.env.VITE_API_URL;
 
   const fetchData = async (url, setState) => {
     try {
@@ -39,20 +40,20 @@ const Home = () => {
   };
 
   const getTopPackages = useCallback(() => {
-    fetchData("/api/package/get-packages?sort=packageRating&limit=8", setTopPackages);
-  }, []);
+    fetchData(`${API_URL}/api/package/get-packages?sort=packageRating&limit=8`, setTopPackages);
+  }, [API_URL]);
 
   const getLatestPackages = useCallback(() => {
-    fetchData("/api/package/get-packages?sort=createdAt&limit=8", setLatestPackages);
-  }, []);
+    fetchData(`${API_URL}/api/package/get-packages?sort=createdAt&limit=8`, setLatestPackages);
+  }, [API_URL]);
 
   const getOfferPackages = useCallback(() => {
-    fetchData("/api/package/get-packages?sort=createdAt&offer=true&limit=6", setOfferPackages);
-  }, []);
+    fetchData(`${API_URL}/api/package/get-packages?sort=createdAt&offer=true&limit=6`, setOfferPackages);
+  }, [API_URL]);
 
   const getFeaturedBlogs = useCallback(() => {
-    fetchData("/api/blog/featured?limit=3", setFeaturedBlogs); // Adjust the API endpoint as needed
-  }, []);
+    fetchData(`${API_URL}/api/blog/featured?limit=3`, setFeaturedBlogs); // Adjust the API endpoint as needed
+  }, [API_URL]);
 
   useEffect(() => {
     getTopPackages();
@@ -121,9 +122,9 @@ const Home = () => {
               </Typography>
               <Slider {...sliderSettings}>
                 {topPackages.map((packageData, i) => (
-                  <div key={i}>
+                  <Box key={i} sx={{ px: 1 }}>
                     <PackageCard packageData={packageData} />
-                  </div>
+                  </Box>
                 ))}
               </Slider>
             </>
@@ -137,9 +138,9 @@ const Home = () => {
               </Typography>
               <Slider {...sliderSettings}>
                 {latestPackages.map((packageData, i) => (
-                  <div key={i}>
+                  <Box key={i} sx={{ px: 1 }}>
                     <PackageCard packageData={packageData} />
-                  </div>
+                  </Box>
                 ))}
               </Slider>
             </>
@@ -153,9 +154,9 @@ const Home = () => {
               </Typography>
               <Slider {...sliderSettings}>
                 {offerPackages.map((packageData, i) => (
-                  <div key={i}>
+                  <Box key={i} sx={{ px: 1 }}>
                     <PackageCard packageData={packageData} />
-                  </div>
+                  </Box>
                 ))}
               </Slider>
             </>
@@ -167,11 +168,11 @@ const Home = () => {
               <Typography textAlign={"center"} variant="h5" sx={{ mb: 2 }}>
                 Featured Blog Posts
               </Typography>
-              <Box display="flex" flexDirection="row" gap={4}>
+              <Box display="flex" flexDirection="row" gap={4} justifyContent="center">
                 {featuredBlogs.map((blog, i) => (
-                  <div key={i}>
+                  <Box key={i} sx={{ px: 1 }}>
                     <BlogCard blog={blog} />
-                  </div> // Use the blog's unique ID
+                  </Box>
                 ))}
               </Box>
             </>
