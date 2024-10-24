@@ -15,6 +15,10 @@ const app = express();
 dotenv.config();
 
 const __dirname = path.resolve();
+const allowedOrigins = [
+  "http://localhost:4173",
+  "https://mern-travel-tourism-app-main-9qh7.onrender.com",
+];
 
 mongoose
   .connect(process.env.MONGO_URL)
@@ -25,9 +29,17 @@ mongoose
 
 app.use(
   cors({
-    origin: process.env.SERVER_URL,
+    origin: function (origin, callback) {
+      if (allowedOrigins.includes(origin)) {
+        callback(null, true);
+      } else {
+        callback(new Error("Not allowed by CORS"));
+      }
+    },
+    credentials: true,
   })
 );
+
 app.use(express.json());
 app.use(cookieParser());
 

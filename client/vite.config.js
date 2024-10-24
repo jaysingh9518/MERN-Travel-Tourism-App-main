@@ -7,6 +7,7 @@ export default defineConfig({
     proxy: {
       "/api": {
         target: "https://mern-travel-tourism-app-main-9qh7.onrender.com",
+        changeOrigin: true,
         secure: false,
       },
     },
