@@ -4,7 +4,7 @@ import Home from "./pages/Home";
 import Signup from "./pages/Signup";
 import Login from "./pages/Login";
 import Header from "./pages/components/Header";
-import Footer from "./pages/components/footer";
+import Footer from "./pages/components/Footer";
 import Profile from "./pages/Profile";
 import About from "./pages/About";
 import Contact from "./pages/Contact";
