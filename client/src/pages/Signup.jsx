@@ -9,7 +9,7 @@ const Signup = () => {
   const dispatch = useDispatch();
   const navigate = useNavigate();
   const { loading, error } = useSelector((state) => state.user);
-  
+  const API_URL = import.meta.env.VITE_API_URL;
   const [formData, setFormData] = useState({
     username: "",
     email: "",
@@ -29,14 +29,14 @@ const Signup = () => {
     e.preventDefault();
     try {
       // Perform the signup request
-      const signupRes = await axios.post(`/api/auth/signup`, formData);
+      const signupRes = await axios.post(`${API_URL}/api/auth/signup`, formData);
 
       if (signupRes?.data?.success) {
         alert(signupRes?.data?.message);
 
         // Automatically log the user in after successful signup
         dispatch(loginStart());
-        const loginRes = await axios.post(`/api/auth/login`, {
+        const loginRes = await axios.post(`${API_URL}/api/auth/login`, {
           email: formData.email,
           password: formData.password,
         });

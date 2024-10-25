@@ -13,6 +13,7 @@ const Login = () => {
     email: "",
     password: "",
   });
+  const API_URL = import.meta.env.VITE_API_URL;
 
   // Extract the redirect path from query parameters
   const redirect = new URLSearchParams(location.search).get("redirect") || "/";
@@ -29,7 +30,7 @@ const Login = () => {
     dispatch(loginStart());
 
     try {
-      const res = await fetch(`/api/auth/login`, {
+      const res = await fetch(`${API_URL}/api/auth/login`, {
         method: "POST",
         headers: {
           "Content-Type": "application/json",

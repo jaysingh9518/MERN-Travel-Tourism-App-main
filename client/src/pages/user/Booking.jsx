@@ -49,12 +49,13 @@ const Booking = () => {
   const [clientToken, setClientToken] = useState("");
   const [instance, setInstance] = useState("");
   const [currentDate, setCurrentDate] = useState("");
+  const API_URL = import.meta.env.VITE_API_URL;
 
   const getPackageData = async () => {
     try {
       setLoading(true);
       const res = await fetch(
-        `/api/package/get-package-data/${params?.packageId}`
+        `${API_URL}/api/package/get-package-data/${params?.packageId}`
       );
       const data = await res.json();
       if (data?.success) {
@@ -71,7 +72,7 @@ const Booking = () => {
 
   const getToken = async () => {
     try {
-      const { data } = await axios.get(`/api/package/braintree/token`);
+      const { data } = await axios.get(`${API_URL}/api/package/braintree/token`);
       setClientToken(data?.clientToken);
     } catch (error) {
       console.log(error);
@@ -95,7 +96,7 @@ const Booking = () => {
     }
     try {
       setLoading(true);
-      const res = await fetch(`/api/booking/book-package/${params?.id}`, {
+      const res = await fetch(`${API_URL}/api/booking/book-package/${params?.id}`, {
         method: "POST",
         headers: {
           "Content-Type": "application/json",

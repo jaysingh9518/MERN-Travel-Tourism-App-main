@@ -10,12 +10,13 @@ const Packages = () => {
   const [currentPage, setCurrentPage] = useState(1);
   const [itemsPerPage] = useState(9); // Adjust items per page as needed
   const [totalPages, setTotalPages] = useState(0); // State for total pages
+  const API_URL = import.meta.env.VITE_API_URL;
 
   const fetchPackages = async () => {
     setLoading(true); // Start loading
     try {
       const response = await fetch(
-        `/api/package/get-packages?page=${currentPage}&limit=${itemsPerPage}`
+        `${API_URL}/api/package/get-packages?page=${currentPage}&limit=${itemsPerPage}`
       ); // Updated API endpoint
       const data = await response.json();
       if (response.ok) {

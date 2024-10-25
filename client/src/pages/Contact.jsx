@@ -15,6 +15,7 @@ const Contact = () => {
   const navigate = useNavigate();
   const [successMessage, setSuccessMessage] = useState(""); // State to hold success messages
   const [error, setError] = useState(""); // State to hold error messages
+  const API_URL = import.meta.env.VITE_API_URL;
 
   const handleChange = (e) => {
     const { name, value } = e.target;
@@ -31,7 +32,7 @@ const Contact = () => {
 
     try {
       // Ensure the API URL is correct and the backend is running
-      const response = await axios.post("/api/contact/create", formData);
+      const response = await axios.post(`${API_URL}/api/contact/create`, formData);
       if (response.status === 201) {
         setSuccessMessage("Your message has been sent successfully!"); // Set success message
         setFormData({ // Reset form data

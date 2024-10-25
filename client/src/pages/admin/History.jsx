@@ -8,12 +8,13 @@ const History = () => {
   const [loading, setLoading] = useState(false);
   const [error, setError] = useState(false);
   const [search, setSearch] = useState("");
+  const API_URL = import.meta.env.VITE_API_URL;
 
   const getAllBookings = async () => {
     try {
       setLoading(true);
       const res = await fetch(
-        `/api/booking/get-allBookings?searchTerm=${search}`
+        `${API_URL}/api/booking/get-allBookings?searchTerm=${search}`
       );
       const data = await res.json();
       if (data?.success) {
@@ -37,7 +38,7 @@ const History = () => {
     try {
       setLoading(true);
       const res = await fetch(
-        `/api/booking/delete-booking-history/${id}/${currentUser._id}`,
+        `${API_URL}/api/booking/delete-booking-history/${id}/${currentUser._id}`,
         {
           method: "DELETE",
         }

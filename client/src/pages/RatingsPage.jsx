@@ -17,14 +17,15 @@ const RatingsPage = () => {
   const [showRatingStars, setShowRatingStars] = useState(0);
   const [totalRatings, setTotalRatings] = useState(0);
   const [loading, setLoading] = useState(false);
+  const API_URL = import.meta.env.VITE_API_URL;
 
   const getRatings = async () => {
     try {
       setLoading(true);
       const res = await fetch(
-        `/api/rating/get-ratings/${params.id}/999999999999`
+        `${API_URL}/api/rating/get-ratings/${params.id}/999999999999`
       );
-      const res2 = await fetch(`/api/rating/average-rating/${params.id}`);
+      const res2 = await fetch(`${API_URL}/api/rating/average-rating/${params.id}`);
       const data = await res.json();
       const data2 = await res2.json();
 

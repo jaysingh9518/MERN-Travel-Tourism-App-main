@@ -16,13 +16,14 @@ const MyBookings = () => {
   const [loading, setLoading] = useState(false);
   const [error, setError] = useState(false);
   const [searchTerm, setSearchTerm] = useState("");
+  const API_URL = import.meta.env.VITE_API_URL;
 
   const getAllBookings = async () => {
     setCurrentBookings([]);
     try {
       setLoading(true);
       const res = await fetch(
-        `/api/booking/get-UserCurrentBookings/${currentUser?._id}?searchTerm=${searchTerm}`
+        `${API_URL}/api/booking/get-UserCurrentBookings/${currentUser?._id}?searchTerm=${searchTerm}`
       );
       const data = await res.json();
       if (data?.success) {
@@ -48,7 +49,7 @@ const MyBookings = () => {
     try {
       setLoading(true);
       const res = await fetch(
-        `/api/booking/cancel-booking/${id}/${currentUser._id}`,
+        `${API_URL}/api/booking/cancel-booking/${id}/${currentUser._id}`,
         {
           method: "POST",
         }

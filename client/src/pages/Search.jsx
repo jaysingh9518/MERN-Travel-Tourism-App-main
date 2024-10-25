@@ -34,6 +34,7 @@ const Search = () => {
   const [totalPackageCount, setTotalPackageCount] = useState(0);
   const [totalBlogCount, setTotalBlogCount] = useState(0);
   const itemsPerPage = 3; // Define items per page
+  const API_URL = import.meta.env.VITE_API_URL;
 
   useEffect(() => {
     const urlParams = new URLSearchParams(location.search);
@@ -58,7 +59,7 @@ const Search = () => {
 
         // Fetch packages with pagination
         const packageResponse = await fetch(
-          `/api/package/get-packages?${searchQuery}&limit=${itemsPerPage}&page=${packagePage}`
+          `${API_URL}/api/package/get-packages?${searchQuery}&limit=${itemsPerPage}&page=${packagePage}`
         );
         const packageData = await packageResponse.json();
         setAllPackages(packageData?.packages || []);
@@ -66,7 +67,7 @@ const Search = () => {
 
         // Fetch blogs with pagination
         const blogResponse = await fetch(
-          `/api/blog?${searchQuery}&limit=${itemsPerPage}&page=${blogPage}`
+          `${API_URL}/api/blog?${searchQuery}&limit=${itemsPerPage}&page=${blogPage}`
         );
         const blogData = await blogResponse.json();
         setAllBlogs(blogData?.blogs || []);
@@ -113,7 +114,7 @@ const Search = () => {
   const fetchFeaturedBlogs = async () => {
     setLoading(true);
     try {
-      const response = await fetch(`/api/blog/featured`);
+      const response = await fetch(`${API_URL}/api/blog/featured`);
       const data = await response.json();
       setAllBlogs(data.blogs);
       setTotalBlogCount(data.blogs.length);

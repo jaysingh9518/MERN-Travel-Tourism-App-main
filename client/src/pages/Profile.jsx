@@ -47,6 +47,7 @@ const Profile = () => {
     phone: "",
     avatar: "",
   });
+  const API_URL = import.meta.env.VITE_API_URL;
 
   useEffect(() => {
     if (currentUser !== null) {
@@ -84,7 +85,7 @@ const Profile = () => {
         const avatarUrl = data.secure_url;
 
         const updateRes = await fetch(
-          `/api/user/update-profile-photo/${currentUser._id}`,
+          `${API_URL}/api/user/update-profile-photo/${currentUser._id}`,
           {
             method: "POST",
             headers: {
@@ -121,7 +122,7 @@ const Profile = () => {
   const handleLogout = async () => {
     try {
       dispatch(logOutStart());
-      const res = await fetch("/api/auth/logout");
+      const res = await fetch(`${API_URL}/api/auth/logout`);
       const data = await res.json();
       if (data?.success !== true) {
         dispatch(logOutFailure(data?.message));
@@ -142,7 +143,7 @@ const Profile = () => {
     if (CONFIRM) {
       try {
         dispatch(deleteUserAccountStart());
-        const res = await fetch(`/api/user/delete/${currentUser._id}`, {
+        const res = await fetch(`${API_URL}/api/user/delete/${currentUser._id}`, {
           method: "DELETE",
         });
         const data = await res.json();

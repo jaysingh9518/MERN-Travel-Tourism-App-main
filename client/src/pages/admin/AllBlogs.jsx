@@ -7,6 +7,7 @@ const AllBlogs = () => {
   const [filter, setFilter] = useState("all");
   const [search, setSearch] = useState("");
   const [showMoreBtn, setShowMoreBtn] = useState(false);
+  const API_URL = import.meta.env.VITE_API_URL;
 
   const getBlogs = async () => {
     setBlogs([]);
@@ -14,12 +15,12 @@ const AllBlogs = () => {
       setLoading(true);
       let url =
         filter === "featured" // featured
-          ? `/api/blog?searchTerm=${search}&featured=true`
+          ? `${API_URL}/api/blog?searchTerm=${search}&featured=true`
           : filter === "latest" // latest
-          ? `/api/blog?searchTerm=${search}&sort=createdAt`
+          ? `${API_URL}/api/blog?searchTerm=${search}&sort=createdAt`
           : filter === "top" // top rated
-          ? `/api/blog?searchTerm=${search}&sort=blogRating`
-          : `/api/blog?searchTerm=${search}`; // all
+          ? `${API_URL}/api/blog?searchTerm=${search}&sort=blogRating`
+          : `${API_URL}/api/blog?searchTerm=${search}`; // all
       const res = await fetch(url);
       const data = await res.json();
       if (data?.success) {
@@ -44,12 +45,12 @@ const AllBlogs = () => {
     const startIndex = numberOfBlogs;
     let url =
       filter === "featured"
-        ? `/api/blog?searchTerm=${search}&featured=true&startIndex=${startIndex}`
+        ? `${API_URL}/api/blog?searchTerm=${search}&featured=true&startIndex=${startIndex}`
         : filter === "latest"
-        ? `/api/blog?searchTerm=${search}&sort=createdAt&startIndex=${startIndex}`
+        ? `${API_URL}/api/blog?searchTerm=${search}&sort=createdAt&startIndex=${startIndex}`
         : filter === "top"
-        ? `/api/blog?searchTerm=${search}&sort=blogRating&startIndex=${startIndex}`
-        : `/api/blog?searchTerm=${search}&startIndex=${startIndex}`;
+        ? `${API_URL}/api/blog?searchTerm=${search}&sort=blogRating&startIndex=${startIndex}`
+        : `${API_URL}/api/blog?searchTerm=${search}&startIndex=${startIndex}`;
     const res = await fetch(url);
     const data = await res.json();
     if (data?.blogs?.length < 9) {
@@ -65,7 +66,7 @@ const AllBlogs = () => {
   const handleDelete = async (blogId) => {
     try {
       setLoading(true);
-      const res = await fetch(`/api/blog/delete/${blogId}`, {
+      const res = await fetch(`${API_URL}/api/blog/delete/${blogId}`, {
         method: "DELETE",
       });
       const data = await res.json();

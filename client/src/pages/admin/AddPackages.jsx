@@ -22,6 +22,7 @@ const AddPackages = () => {
   const [imageUploadPercent, setImageUploadPercent] = useState(0);
   const [loading, setLoading] = useState(false);
   const [error, setError] = useState(false);
+  const API_URL = import.meta.env.VITE_API_URL;
 
   const handleChange = (e) => {
     setFormData({ ...formData, [e.target.id]: e.target.value });
@@ -135,7 +136,7 @@ const AddPackages = () => {
       setLoading(true);
       setError(false);
 
-      const res = await fetch("/api/package/create-package", {
+      const res = await fetch(`${API_URL}/api/package/create-package`, {
         method: "POST",
         headers: {
           "Content-Type": "application/json",

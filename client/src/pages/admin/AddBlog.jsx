@@ -15,6 +15,7 @@ const AddBlog = () => {
   const [imageUploadPercent, setImageUploadPercent] = useState(0);
   const [loading, setLoading] = useState(false);
   const [error, setError] = useState(false);
+  const API_URL = import.meta.env.VITE_API_URL;
 
   // Handling form changes
   const handleChange = (e) => {
@@ -94,7 +95,7 @@ const AddBlog = () => {
       setLoading(true);
       setError(false);
 
-      const res = await fetch("/api/blog/create", {
+      const res = await fetch(`${API_URL}/api/blog/create`, {
         method: "POST",
         headers: {
           "Content-Type": "application/json",

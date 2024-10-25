@@ -7,6 +7,7 @@ const AllPackages = () => {
   const [filter, setFilter] = useState("all");
   const [search, setSearch] = useState("");
   const [showMoreBtn, setShowMoreBtn] = useState(false);
+  const API_URL = import.meta.env.VITE_API_URL;
 
   const getPackages = async () => {
     setPackages([]);
@@ -14,12 +15,12 @@ const AllPackages = () => {
       setLoading(true);
       let url =
         filter === "offer" //offer
-          ? `/api/package/get-packages?searchTerm=${search}&offer=true`
+          ? `${API_URL}/api/package/get-packages?searchTerm=${search}&offer=true`
           : filter === "latest" //latest
-          ? `/api/package/get-packages?searchTerm=${search}&sort=createdAt`
+          ? `${API_URL}/api/package/get-packages?searchTerm=${search}&sort=createdAt`
           : filter === "top" //top rated
-          ? `/api/package/get-packages?searchTerm=${search}&sort=packageRating`
-          : `/api/package/get-packages?searchTerm=${search}`; //all
+          ? `${API_URL}/api/package/get-packages?searchTerm=${search}&sort=packageRating`
+          : `${API_URL}/api/package/get-packages?searchTerm=${search}`; //all
       const res = await fetch(url);
       const data = await res.json();
       if (data?.success) {
@@ -44,12 +45,12 @@ const AllPackages = () => {
     const startIndex = numberOfPackages;
     let url =
       filter === "offer" //offer
-        ? `/api/package/get-packages?searchTerm=${search}&offer=true&startIndex=${startIndex}`
+        ? `${API_URL}/api/package/get-packages?searchTerm=${search}&offer=true&startIndex=${startIndex}`
         : filter === "latest" //latest
-        ? `/api/package/get-packages?searchTerm=${search}&sort=createdAt&startIndex=${startIndex}`
+        ? `${API_URL}/api/package/get-packages?searchTerm=${search}&sort=createdAt&startIndex=${startIndex}`
         : filter === "top" //top rated
-        ? `/api/package/get-packages?searchTerm=${search}&sort=packageRating&startIndex=${startIndex}`
-        : `/api/package/get-packages?searchTerm=${search}&startIndex=${startIndex}`; //all
+        ? `${API_URL}/api/package/get-packages?searchTerm=${search}&sort=packageRating&startIndex=${startIndex}`
+        : `${API_URL}/api/package/get-packages?searchTerm=${search}&startIndex=${startIndex}`; //all
     const res = await fetch(url);
     const data = await res.json();
     if (data?.packages?.length < 9) {
@@ -65,7 +66,7 @@ const AllPackages = () => {
   const handleDelete = async (packageId) => {
     try {
       setLoading(true);
-      const res = await fetch(`/api/package/delete-package/${packageId}`, {
+      const res = await fetch(`${API_URL}/api/package/delete-package/${packageId}`, {
         method: "DELETE",
       });
       const data = await res.json();

@@ -31,10 +31,11 @@ const BlogDetails = () => {
   const [comments, setComments] = useState([]);
   const currentUser = useSelector((state) => state.user.currentUser);
   const [copied, setCopied] = useState(false);
+  const API_URL = import.meta.env.VITE_API_URL;
 
   const fetchBlogDetails = async () => {
     try {
-      const response = await fetch(`/api/blog/${id}`);
+      const response = await fetch(`${API_URL}/api/blog/${id}`);
       const data = await response.json();
       if (data.success) {
         setBlogData(data.blog);
@@ -51,17 +52,17 @@ const BlogDetails = () => {
   };
 
   const incrementViews = async () => {
-    await fetch(`/api/blog/view/${id}`, { method: "PUT" });
+    await fetch(`${API_URL}/api/blog/view/${id}`, { method: "PUT" });
   };
 
   const handleLike = async () => {
-    const response = await fetch(`/api/blog/like/${id}`, { method: "PUT" });
+    const response = await fetch(`${API_URL}/api/blog/like/${id}`, { method: "PUT" });
     const data = await response.json();
     if (data.success) setBlogData((prev) => ({ ...prev, likes: data.likes }));
   };
 
   const handleDislike = async () => {
-    const response = await fetch(`/api/blog/dislike/${id}`, { method: "PUT" });
+    const response = await fetch(`${API_URL}/api/blog/dislike/${id}`, { method: "PUT" });
     const data = await response.json();
     if (data.success)
       setBlogData((prev) => ({ ...prev, dislikes: data.dislikes }));
@@ -76,7 +77,7 @@ const BlogDetails = () => {
     }
 
     try {
-      const response = await fetch(`/api/blog/comment/${id}`, {
+      const response = await fetch(`${API_URL}/api/blog/comment/${id}`, {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify({

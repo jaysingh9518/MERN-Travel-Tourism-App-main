@@ -34,6 +34,7 @@ const Header = () => {
   const dispatch = useDispatch();
   const [anchorEl, setAnchorEl] = useState(null);
   const [isSearchVisible, setIsSearchVisible] = useState(false);
+  const API_URL = import.meta.env.VITE_API_URL;
 
   const toggleSearchComponent = () => {
     setIsSearchVisible(!isSearchVisible);
@@ -54,7 +55,7 @@ const Header = () => {
   const handleLogout = async () => {
     try {
       dispatch(logOutStart());
-      const res = await fetch("/api/auth/logout");
+      const res = await fetch(`${API_URL}/api/auth/logout`);
       const data = await res.json();
       if (data?.success) {
         dispatch(logOutSuccess());

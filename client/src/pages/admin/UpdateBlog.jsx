@@ -17,11 +17,12 @@ const UpdateBlog = () => {
   const [uploadProgress, setUploadProgress] = useState(0);
   const [loading, setLoading] = useState(false);
   const [error, setError] = useState(null);
+  const API_URL = import.meta.env.VITE_API_URL;
 
   // Fetch blog data to populate the form
   const getBlogData = async () => {
     try {
-      const res = await fetch(`/api/blog/${id}`);
+      const res = await fetch(`${API_URL}/api/blog/${id}`);
       const data = await res.json();
       if (data.success) {
         setFormData({
@@ -115,7 +116,7 @@ const UpdateBlog = () => {
       setLoading(true);
       setError(null);
 
-      const res = await fetch(`/api/blog/update/${id}`, {
+      const res = await fetch(`${API_URL}/api/blog/update/${id}`, {
         method: "PUT",
         headers: {
           "Content-Type": "application/json",

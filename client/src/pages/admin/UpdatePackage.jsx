@@ -25,10 +25,11 @@ const UpdatePackage = () => {
   const [imageUploadPercent, setImageUploadPercent] = useState(0);
   const [loading, setLoading] = useState(false);
   const [error, setError] = useState(false);
+  const API_URL = import.meta.env.VITE_API_URL;
 
   const getPackageData = async () => {
     try {
-      const res = await fetch(`/api/package/get-package-data/${params?.id}`);
+      const res = await fetch(`${API_URL}/api/package/get-package-data/${params?.id}`);
       const data = await res.json();
       if (data?.success) {
         setFormData({
@@ -158,7 +159,7 @@ const UpdatePackage = () => {
       setLoading(true);
       setError(false);
 
-      const res = await fetch(`/api/package/update-package/${params?.id}`, {
+      const res = await fetch(`${API_URL}/api/package/update-package/${params?.id}`, {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
