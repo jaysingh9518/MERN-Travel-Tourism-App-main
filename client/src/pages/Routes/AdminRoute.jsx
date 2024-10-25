@@ -9,21 +9,32 @@ export default function AdminRoute() {
   const API_URL = import.meta.env.VITE_API_URL;
 
   const authCheck = async () => {
-    const res = await fetch(`${API_URL}/api/user/admin-auth`, {
-      method: "GET",
-      headers: {
-        Accept: "application/json",
-        "Content-Type": "application/json",
-      },
-    });
-    const data = await res.json();
-    if (data.check) setOk(true);
-    else setOk(false);
+    try {
+      const res = await fetch(`${API_URL}/api/user/admin-auth`, {
+        method: "GET",
+        headers: {
+          Accept: "application/json",
+          "Content-Type": "application/json",
+        },
+        credentials: "include",
+      });
+      const data = await res.json();
+      setOk(data.check ? true : false);
+    } catch (error) {
+      console.error("Error during admin auth check:", error);
+      setOk(false);
+    }
   };
 
   useEffect(() => {
-    if (currentUser !== null) authCheck();
+    if (currentUser !== null) {
+      authCheck();
+    }
   }, [currentUser]);
+
+  if (currentUser === null) {
+    return <Navigate to="/login" />;
+  }
 
   return ok ? <Outlet /> : <Spinner />;
 }
